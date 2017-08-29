@@ -1,16 +1,12 @@
 def bubble_sort(a):
-    sorted = False
-
-    while not sorted:
-        made_swap = False
-
-        for i in range(len(a) - 1):
-            if a[i] > a[i + 1]:
-                a[i], a[i + 1] = a[i + 1], a[i]
+    for i in range(len(a) - 1):
+        for j in range(len(a) - i - 1):
+            if a[j] > a[j + 1]:
+                a[j], a[j + 1] = a[j + 1], a[j]
                 made_swap = True
 
         if not made_swap:
-            sorted = True
+            break
 
     return a
 
