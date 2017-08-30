@@ -4,9 +4,7 @@ def merge_sort(l):
 
     mid = int(len(l) / 2)
     l1 = merge_sort(l[:mid])
-    print l1
     l2 = merge_sort(l[mid:])
-    print l2
 
     return merge_sorted_arrays(l1, l2)
 
